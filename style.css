@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.resumo {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.form-item {
+  display: grid;
+  grid-template-columns: 1fr 75px 165px auto;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-item input,
+.form-item select {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.form-item input:focus,
+.form-item select:focus {
+  outline: none;
+  border-color: #16a34a;
+}
+
+.btn-adicionar {
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-adicionar:hover {
+  background-color: #15803d;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.filtros {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.filtro {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filtro.active {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #166534;
+  font-weight: 600;
+}
+
+.btn-secundario {
+  background: transparent;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-secundario:hover {
+  background: #fef2f2;
+}
+
+.lista-compras {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.item.comprado {
+  background: #f0fdf4;
+  opacity: 0.75;
+}
+
+.item-principal {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.item-principal input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #16a34a;
+  cursor: pointer;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-nome {
+  font-weight: 500;
+}
+
+.item.comprado .item-nome {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.item-meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.btn-remover {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+}
+
+.btn-remover:hover {
+  color: #dc2626;
+}
+
+.vazio {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 560px) {
+  .form-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-item input[type="text"],
+  .btn-adicionar {
+    grid-column: 1 / -1;
+  }
+}

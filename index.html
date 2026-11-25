@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Compras do Mês</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>🛒 Lista de Compras do Mês</h1>
+      <p id="resumo" class="resumo">0 de 0 itens comprados</p>
+    </header>
+
+    <form id="form-item" class="form-item">
+      <input
+        type="text"
+        id="input-nome"
+        placeholder="Ex.: Arroz 5kg, Detergente..."
+        required
+      />
+      <input
+        type="number"
+        id="input-qtd"
+        min="1"
+        value="1"
+        title="Quantidade"
+        required
+      />
+      <select id="select-categoria" aria-label="Categoria">
+        <option value="Mercearia">Mercearia</option>
+        <option value="Hortifruti">Hortifruti</option>
+        <option value="Açougue e Laticínios">Açougue e Laticínios</option>
+        <option value="Limpeza">Limpeza</option>
+        <option value="Higiene">Higiene</option>
+        <option value="Outros">Outros</option>
+      </select>
+      <button type="submit" class="btn-adicionar">Adicionar</button>
+    </form>
+
+    <div class="acoes">
+      <div class="filtros">
+        <button type="button" class="filtro active" data-filtro="todos">Todos</button>
+        <button type="button" class="filtro" data-filtro="pendentes">Pendentes</button>
+        <button type="button" class="filtro" data-filtro="comprados">Comprados</button>
+      </div>
+      <button type="button" id="btn-limpar-comprados" class="btn-secundario">
+        Limpar comprados
+      </button>
+    </div>
+
+    <ul id="lista-compras" class="lista-compras"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
